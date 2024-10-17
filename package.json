@@ -2,9 +2,17 @@
   "name": "zarrtech",
   "version": "1.0.0",
   "description": "A zart application",
-  "main": "index.js",
+  "main": "index.ts",
+  "files": [
+    "build",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=development&& ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
